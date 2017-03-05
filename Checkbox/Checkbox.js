@@ -24,17 +24,17 @@ export default class Checkbox extends Component {
     const { checked, onChange, children, label, style, ...rest }=this.props;
     return (
       <label
-        className="orion-checkbox"
+        className="checkbox"
         style={style}
       >
         <input
           {...rest}
           type="checkbox"
-          className="orion-checkbox-ele"
+          className="checkbox-ele"
           checked={checked}
           onChange={onChange}
         />
-        <div className="orion-checkbox-label"/>
+        <div className="checkbox-label"/>
         {label || children}
       </label>
     );
