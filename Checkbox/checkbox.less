@@ -1,0 +1,49 @@
+checkbox {
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 24px;
+    cursor: pointer;
+}
+
+checkbox-label {
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    transition: background .2s ease-in-out;
+    &:after {
+        position: absolute;
+        opacity: 0;
+        content: "\2714";
+        box-sizing: border-box;
+        background: transparent;
+        color: #f48e2b;
+        font-size: 16px;
+        line-height: 1;
+        top: -1px;
+        left: 1px;
+        transition: border-color .2s ease-in-out, opacity .2s ease-in-out;
+    }
+}
+
+checkbox-ele {
+    display: none;
+}
+
+checkbox-ele:checked + checkbox-label:after {
+    box-sizing: border-box;
+    opacity: 1;
+}
+
+checkbox-ele:disabled + checkbox-label {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+    &:after {
+        color: #ccc;
+    }
+}
