@@ -1,0 +1,27 @@
+div,ul,li{
+  margin:0;
+  padding:0;
+}
+body{
+  background: #f2f2f2;
+}
+.container{
+  margin: 40px auto -20px;
+  width:1200px;
+  overflow: hidden;
+  background: #ddd;
+}
+ul{
+  margin:0 0 -20px -20px;
+  list-style: none;
+  display:table;//这两个属性是消除 
+  word-spacing: -6px;//li 中display:inline-block 带来的间距
+}
+li{
+  display: inline-block;
+  margin:0 0 20px 20px;
+  vertical-align: top;
+  width: 285px;
+  height: 200px;
+  background: #bbb;
+}
