@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+@width:640px;
+._transition(@style:all, @time:1s) {
+    transition: @style @time ease-in-out;
+    -webkit-transition: @style @time ease-in-out;
+}
+.content{
+    position: relative;
+    height: 360px;
+    margin:50px auto;
+    overflow: hidden; 
+    width: @width;
+}
+.carousel{
+    height: 100%;
+    overflow: hidden; 
+    position: relative;
+    width:100%;
+    li{
+        height: 100%;
+        list-style: none;
+        margin: 0;
+        width:100%;
+        position: absolute;
+    }
+}
+.left{
+    left:-@width;
+    ._transition(left);
+}
+.center{
+    left:0;
+    z-index: 1;
+    ._transition(left);
+}
+.right{
+    left:@width;
+    z-index:-1;
+}
